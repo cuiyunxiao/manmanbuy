@@ -1,0 +1,48 @@
+#brand-title {
+  background-color: #fff;
+}
+#brand-title > .product-title {
+  position: relative;
+}
+#brand-title > .product-title > .breadcrumb {
+  margin-bottom: 0px;
+}
+#brand-title > .product-title > .breadcrumb > li::before {
+  content: "";
+}
+#brand-title > .product-title > .breadcrumb > li::after {
+  content: " >";
+}
+#brand-title > .product-title > .btn {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  height: 30px;
+}
+#brand-title > .bigTitle {
+  background-color: fff;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+#brand-title > .bigTitle > h4 {
+  background-color: #eee;
+  padding: 10px;
+  margin: 5px 0;
+  color: #874604;
+}
+#brand-title > .brand-List {
+  background-color: #fff;
+  padding-bottom: 1px;
+}
+#brand-title > .brand-List > .list-title {
+  background-color: #eee;
+}
+#brand-title > .brand-List > .list-title a {
+  display: block;
+}
+#brand-title > .brand-List > .list-title h5 {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}

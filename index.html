@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet/less" href="css/moneyctrl.less">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/common/base.css">
+
+<!--自己的less样式-->
+
+
+<link rel="stylesheet/less" href="css//waitting.less">
+<!--less.js-->
+<script src="lib/less/less.js"></script>
+<body>
+<!--头部-->
+<header id="header">
+    <a id="logo" href="#">
+        <img src="images/header_logo.png">
+    </a>
+    <a id="app" href="#">
+        <img src="images/header_app.png">
+    </a>
+</header>
+<!--搜索栏-->
+<section class="search">
+    <form class="">
+        <input id="first" type="search" placeholder="请输入你想比价的商品" >
+        <input id="two" type="submit" value="搜索">
+    </form>
+</section>
+<!--首页菜单栏-->
+<section class="menu">
+    <div class="row">
+        <!--首页菜单栏的坑-->
+
+    </div>
+</section>
+<!--超值折扣-->
+<section class="recommen clearfix">
+    <div class="recommen-title">
+        <h5>超值折扣推荐</h5>
+        <img src="images/header_app.png" alt="">
+    </div>
+    <div class="recommen-list">
+<!--首页折扣列表的坑-->
+    </div>
+    <div class="recommen-more">
+        <a href="moneyctrl.html">更多优惠信息>>></a>
+    </div>
+    <div class="recommen-title">
+        <h5>品牌排行</h5>
+        <img src="images/header_app.png" alt="">
+    </div>
+</section>
+<!--尾部-->
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p>m.manmanbuy.com </p>
+</footer>
+
+</body>
+<!--首页菜单栏模板-->
+<script type="text/tpl" id="menutpl">
+{{each result as value i}}
+<div class="col-xs-3">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+
+        </div>
+{{/each}}
+</script>
+
+<!--首页折扣列表模板-->
+<script type="text/tpl" id="recommentpl">
+{{each result as value i}}
+     <div class="product clearfix">
+            <a class="product-left" href="#">
+               {{#value.productImgSm}}
+            </a>
+            <div class="product-right">
+                <a href="#">
+                    <h5>{{value.productName}}</h5>
+                    <p class="price">{{value.productPinkage}}</p>
+                    <span class="form">{{value.productFrom}}|{{value.productTime}}</span>
+                    <span class="comment clearfix">
+                        <i></i>
+
+              {{getNum(value.productComCount)}}
+
+                    </span>
+                </a>
+            </div>
+        </div>
+
+{{/each}}
+
+</script>
+
+
+
+<script src="lib/jquery/jquery1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/index.js"></script>
+
+<!--自己的index.js-->
+<script src="js/saveMoney/common.js"></script>
+<script src="js/saveMoney/moneyctrl.js"></script>
+<script src="js/saveMoney/MoneyCtrlprodu.js"></script>
+</html>

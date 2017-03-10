@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/lowprice/low.price.css"/>
+    <link rel="stylesheet" href="css/common/base.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部区域-->
+<div id="header">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a href="index.html"> <span class="glyphicon glyphicon-menu-left" ></span></a>
+    </button>
+    <h3>白菜价—淘宝内部券</h3>
+    <a id="appId" href="#">
+        <img src="images/header_app.png">
+    </a>
+</div>
+<!--搜索区域-->
+<section class="search">
+    <form>
+        <input id="first" type="search" placeholder="请输入你想比价的商品" >
+        <input id="two" type="submit" value="搜索">
+    </form>
+</section>
+<!--导航区域-->
+<div class="content">
+
+    <!--导航部分的坑-->
+    <ul class="tab">
+    </ul>
+    <!--搜索部分-->
+    <span></span>
+</div>
+<!--商品部分-->
+<div class="products">
+    <ul class="product-ul">
+        <!--商品部分得坑-->
+    </ul>
+</div>
+<!--底部区域-->
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img class=" returnTop" src="http://www.zuyushop.com/wap/images/top.jpg" alt=""/>返回顶部</a>
+        </div>
+    </div>
+    <p><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>--掌上比价台</p>
+
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--顶部的导航模板-->
+<script type="text/html" id="baicaijiaTitleTmp">
+    {{each result as value i}}
+    <li class="" data-titleid="{{value.titleId}}"><a href="javascript:">{{value.title}}</a></li>
+    {{/each }}
+</script>
+<!--商品部分的模板-->
+<script type="text/html" id="baicaijiaProductTmp">
+
+
+    {{each result as value i}}
+    <li class="product-ul">
+        <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx"
+           target="_blank"></a>
+
+        <div class="pic"><i></i>{{#value.productImg}}</div>
+        <div class="inf">
+            <div class="i">
+                <div class="t"><a href="">{{#value.productName}}</a></div>
+                <div class="pr">{{#value.productPrice}}</div>
+            </div>
+            <div class="o">
+                <div class="bar clearfix">
+                    <a href="">{{#value.productCouponRemain}}</a>
+                </div>
+                <div class="b clearfix">
+                    <div class="q"><a href="">{{#value.productCoupon}}</a></div>
+                    <div class="g"><a href="">{{#value.productHref}}</a></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each }}
+
+</script>
+<script src="js/common/template.js"></script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="js/lowPrice/baicaijia.js"></script>
+</body>
+</html>

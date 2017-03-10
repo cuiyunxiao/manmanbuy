@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--第三方的css-->
+
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/common/base.css"/>
+
+    <link rel="stylesheet/less" href="./less/domesticDiscount/inlanddiscount.less"/>
+    <link rel="stylesheet/less" href="./less/domesticDiscount/waitting.less"/>
+    <link rel="stylesheet" href="./css/domesticDiscount/index.css"/>
+    <!--less.js-->
+    <script src="./js/domesticDiscount/less.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<header id="header">
+    <h4><a href="index.html">国内折扣</a></h4>
+</header>
+
+<main id="inlanddiscount">
+    <div class="inland-discount-list cu-friend">
+        <ul>
+        </ul>
+    </div>
+        <div class="loading" style="transform: scale(0.5) rotate(45deg); display: none;">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+        <div class="bar7"></div>
+        <div class="bar8"></div>
+    </div>
+</main>
+
+
+<!--尾部-->
+<!--尾部区域-->
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="">登录</a>
+        </div>
+        <div class="col-xs-4" >
+            <a href="">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#header" ><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p>m.manmanbuy.com </p>
+</footer>
+
+
+</body>
+<!--第三方js-->
+<script type="text/html" id="inlandTpl">
+    {{each result as value i}}
+
+    <li class="border-img">
+        <!--<a href="./domesticDiscount_1.html?productId=2" title="111">-->
+        <a href="./html/domesticDiscount/domesticDiscount_1.html?productId={{value.productId}}" title="111">
+        <!--<a href="./domesticDiscount_1.html?productId=}{{value.productId}" title="111">-->
+
+            <div class="img">{{#value.productImg}}</div>
+            <div class="title">{{value.productName}}</div>
+            <div class="subtit">{{value.productPrice}}</div>
+            <div class="info">
+                <div class="mall">{{value.productFrom}} | {{value.productTime}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<!--调用第三方库-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--模板-->
+<script src="./lib/template/template.js"></script>
+<!--自己的库-->
+<script src="./js/domesticDiscount/common.js"></script>
+<script src="./js/domesticDiscount/inlanddiscount.js"></script>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>国内折扣</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <!--第三方的css-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!--自己的less样式-->
+    <link rel="stylesheet/less" href="./css/saveMoney/base.less">
+    <link rel="stylesheet/less" href="./css/common/base.css">
+    <link rel="stylesheet/less" href="./css/saveMoney/moneyctrl.less">
+    <link rel="stylesheet/less" href="./css/saveMoney/waitting.less">
+	<link rel="stylesheet/less" href="./css/saveMoney/moneyproduct.less">
+    <!--less.js-->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header id="header">
+    	<!--坑-->
+    	<!--<div>-->
+    	<a href="moneyctrl.html">
+    	<button type="button" class="btn btn-default" aria-label="Left Align" >
+ 		 <span class="glyphicon glyphicon-menu-left" aria-hidden="true" ></span>
+		</button>
+		</a>
+		<!--</div>-->
+    	<span>国内折扣</span>
+    	<a id="appId" href="#">
+        <img src="./images/header_app.png">
+    </a>
+    </header>
+
+    <section id="moneyproduct">
+        <main id="recommen-product" class="money-product">
+
+        </main>
+    </section>
+
+    <!--尾部-->
+    <!--尾部区域-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="http://127.0.0.1:8020/mmm/mmm/index.html">登录</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="http://127.0.0.1:8020/mmm/mmm/index.html">注册</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="#appId"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </div>
+        </div>
+        <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+</body>
+<!--第三方js-->
+<script type="text/html" id="moneyProductTpl">
+    {{each result as value i}}
+    <div class="container">
+        <div class="cu-content">
+            <h3 class="title">
+                {{value.productName}}</h3>
+            <h4></h4>
+            <div class="info">
+                <span class="mall">{{value.productForm}}</span> <span class="addtime" style="margin-right: 4px;">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <div class="content clearfix">
+                <div class="picwrap">
+                    {{#value.productImgSm}}
+
+                </div>
+                <div class="conn">
+                    <!--内容开始-->
+                    <p>{{value.productInfo}}</p>
+                    <p>{{#value.productImg}}</p>
+                    <p>{{#value.productInfo1}}</p>
+                    <p>{{#value.productInfo3}}</p>
+                    <p>{{#value.productImg2}}</p>
+                    <p>{{#value.productImg3}}</p>
+                </div>
+                <center>
+                    <div class="area"><span class="s"><a href="javascript:;" style=" display:none;"><font id="fqy">广东</font><i class="iconfont">+</i></a>
+              			<div class="drop" style="display: block;">
+                    </div>
+                    </span><strong id="fqy_yh" style=" display:none;">有货</strong> </div>
+                </center>
+                <div class="golink">
+                    <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a></div>
+            </div>
+            <div style="text-align: center; margin: 20px 10px;">
+                <img src="./images/mmbweixin2.png" style="width: 100%; height: auto;">
+            </div>
+            <div class="cu-content-pl ui-border-t">
+                {{#value.productComment}}
+            </div>
+        </div>
+        {{/each}}
+</script>
+		<script src="./lib/jquery/jquery.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.js"></script>
+		<script src="./lib/template/template.js"></script>
+		<!--自己的index.js-->
+		<script src="./js/saveMoney/common.js"></script>
+		<script src="./js/saveMoney/moneyproduct.js"></script>
+
+</html>

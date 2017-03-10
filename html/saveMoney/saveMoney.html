@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>省钱控</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <!--第三方的css-->
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css">
+    <!--自己的less样式-->
+    <link rel="stylesheet/less" href="../../css/common/base.css">
+    <link rel="stylesheet/less" href="../../css/saveMoney/moneyctrl.less">
+    <link rel="stylesheet/less" href="../../css/saveMoney/waitting.less">
+    <!--less.js-->
+    <script src="../../lib/less/less.js"></script>
+</head>
+<body>
+     <div class="loader1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <!--头部-->
+    <header id="header">
+    	<!--坑-->
+    	<!--<div>-->
+    	<a href="http://127.0.0.1:8020/mmm/mmm/index.html">
+    	<button type="button" class="btn btn-default" aria-label="Left Align" >
+ 		 <span class="glyphicon glyphicon-menu-left" aria-hidden="true" ></span>
+		</button>
+		</a>
+		<!--</div>-->
+    	<span>省钱控-最实惠</span>
+    	<a id="appId" href="#">
+        <img src="../../images/header_app.png">
+    </a>
+    </header>
+
+    <!--首页菜单-->
+    <section id="moneyCtrl">
+        <div class="recommen-list">
+
+        </div>
+        <div class="product-page clearfix">
+        	<!--坑-->
+            <input type="button" value="上一页" class="btn btn-default pull-left pre">
+            <input type="button" value="下一页" class="btn btn-default pull-right nex">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    <!--第1页-->
+    <span class="caret"></span>
+  </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--尾部-->
+    <!--尾部区域-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="">登录</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="">注册</a>
+            </div>
+            <div class="col-xs-4">
+                <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </div>
+        </div>
+        <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+</body>
+<!--第三方js-->
+<!--超值折扣-->
+<script id="moneyCtrlTpl" type="text/html">
+    {{each result as value i}}
+    <div class="media">
+        <a class="media-left" href="saveMoney.html?productid={{value.productId}}">
+     {{#value.productImgSm}}
+    </a>
+        <div class="media-body">
+            <a href="saveMoney.html?productid={{value.productId}}">
+                <h5>{{value.productName}}</h5>
+                <p class="price">10</p>
+                <span class="from">{{value.productFrom}} | {{value.productTime}}</span>
+                <span class="comment">
+              <i>
+              </i>
+              {{getNum(value.productComCount)}}
+            </span>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+		<script src="../../lib/jquery/jquery1.12.4.js"></script>
+		<script src="../../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../../lib/template/template.js"></script>
+		<!--自己的index.js-->
+		<script src="../../js/saveMoney/common.js"></script>
+		<script src="../../js/saveMoney/moneyctrl.js"></script>
+		
+</html>

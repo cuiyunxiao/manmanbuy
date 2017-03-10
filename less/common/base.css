@@ -1,0 +1,72 @@
+/*公共样式*/
+
+/*重置*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    /*设置盒模型*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*去除移动端特有的单击时的高亮的背景色*/
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    /*sans-serif:系统默认字体*/
+    font-family: '微软雅黑', sans-serif;
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+a:hover{
+    text-decoration: none;
+    color: #666;
+}
+ul{
+    list-style: none;
+}
+input{
+    /*清除文本框默认的虚线边框*/
+    outline: none;
+    /*清除边框*/
+    border: none;
+    /*添加边框*/
+    border: 1px solid #ccc;
+}
+
+
+/*添加*/
+.m_left10{
+    margin-left:10px;
+}
+.m_right10{
+    margin-right:10px;
+}
+.m_top10{
+    margin-top:10px;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+/*精灵图公共样式*/
+[class^='jd_icon']{
+    position: absolute;
+    background: url("../images/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商城导航</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--第三方的css-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="less/common/base.css">
+    <link rel="stylesheet" href="less/index.css">
+    <!--自己的less样式-->
+    <link rel="stylesheet/less" href="less/index.less">
+    <link rel="stylesheet/less" href="less/brands/brands.less">
+    <link rel="stylesheet/less" href="css/waitting.less">
+    <!--less.js-->
+    <script src="lib/less/less.js"></script>
+    <!--顶部和底部的样式-->
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #header{
+            position: relative;
+            top: 0;
+        }
+        #header  span,#header  p,#header .app{
+            position: absolute;
+        }
+        #header  span{
+            font-family: consolas;
+            color:white;
+            font-size: 40px;
+            line-height: 40px;
+            position: absolute;
+            top:5px;
+            left:10px;
+            cursor:pointer;;
+        }
+        #header  p{
+            color:white;
+            font-size: 20px;
+            line-height: 20px;
+            position: absolute;
+            top:15px;
+            left:40%;
+
+        }
+        #header .app{
+            top:5px;
+            right:0px
+        }
+        a .returnTop {
+            position: fixed;
+            z-index: 999;
+            bottom: 30px;
+            right: 8px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 30px;
+            height: 40px;
+            border-radius: 20px;
+            opacity: 0.5;
+            background-color: #000000;
+            background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M888.890368 434.863104 524.079104 69.685248c-3.62496-3.62496-8.512512-5.63712-13.600768-5.63712-5.08928 0-9.976832 2.01216-13.601792 5.63712L132.06528 434.863104c-16.028672 16.04608-15.031296 42.750976 0.9984 58.76224 15.962112 15.962112 41.76896 16.096256 57.831424 0.050176l277.981184-277.998592 0 604.1344c0 22.694912 18.390016 40.886272 40.971264 40.886272 22.612992 0 42.233856-18.19136 42.233856-40.886272L552.081408 215.676928l277.983232 277.998592c16.06144 16.045056 41.867264 15.911936 57.8304-0.050176C903.921664 477.613056 904.91904 450.909184 888.890368 434.863104z' transform='translate(0, 0)'/></svg>");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 22px auto;
+            display: none;
+        }
+        #footer{
+            background-color: #fff;
+        }
+        footer > div{
+            text-align: center;
+            border:1px solid #ccc ;
+            height:30px;
+            line-height: 30px;
+        }
+        .returnTop{
+            height: 15px;
+            width: 15px;
+        }
+        #footer p{
+            margin: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+        #footer p a{
+            color: #333333;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        #footer p a:first-child{
+            color: red;
+
+        }
+        #content{
+            display: block;
+            margin:10px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+<header id="header">
+    <!--顶部区域-->
+    <span><</span>
+    <p>商城导航</p>
+    <a class="app" href="">
+        <img src="images/header_app.png" alt="" style="width: 60%;height:60%">
+    </a>
+</header>
+<!--榜单部分-->
+<div id="content">
+    <img src="images/sitenav.png" alt="" style="width:65%;height:65%"/>
+</div>
+<!--底部区域-->
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img class=" returnTop" src="http://www.zuyushop.com/wap/images/top.jpg" alt=""/>返回顶部</a>
+        </div>
+    </div>
+    <p><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>--掌上比价台</p>
+
+    <p>m.manmanbuy.com</p>
+</footer>
+<script>
+    var arrow = document.querySelector("span");
+    arrow.onclick = function(){
+        window.location.href = "index.html";
+    }
+</script>
+</html>

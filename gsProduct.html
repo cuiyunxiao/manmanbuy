@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/singleProduct/singleProduct.css"/>
+    <link rel="stylesheet" href="css/common/base.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+</head>
+<body>
+<!--头部样式-->
+<div id="header">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a href="index.html">  <span class="glyphicon glyphicon-menu-left" ></span></a>
+    </button>
+    <h3>凑单品</h3>
+    <a id="appId" href="#">
+        <img src="images/header_app.png">
+    </a>
+</div>
+<!--搜索区域-->
+<section class="search">
+    <form>
+        <input id="first" type="search" placeholder="请输入你想搜索的商品" >
+        <input id="two" type="submit" value="搜索">
+    </form>
+</section>
+<!--渲染部分-->
+
+<main class="gs-product">
+    <div class="list">
+        <div class="hd">
+            <!--抬头栏-->
+            <div class="filter">
+                <ul>
+
+                    <li class=""><a href="javascript:;">1<i></i></a></li>
+                </ul>
+            </div>
+            <!--搜索按钮-->
+            <div class="search"> <i class="icon-search"></i></div>
+            <!--各种下拉-->
+            <div class="popsort popbox" id="shop">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="popcat popbox" id="area">
+                <ul>
+                    <li class=""><a href="#" data-areaid="6">西北（宁夏、新疆等）</a></li>
+                </ul>
+            </div>
+            <div class="popprice popbox" id="price">
+                <ul>
+                    <li class="on"><a href="javascript:;">全部价格</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd gs-product-list">
+            <ul class="masonry" id="container">
+
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+<!--创建商品要渲染的模板-->
+<script type="text/html" id="proLstTpl">
+    {{each result as value i}}
+    <li>
+        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+            <div class="pic"><img src="{{#value.productImg}}"></div>
+            <div class="title">{{value.productName}}</div>
+            <div class="other">
+                <div class="price">{{#value.productPrice}}</div>
+                <div class="btn">去凑单</div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--第三方的js-->
+<script src="lib/jquery/jquery.js"></script>
+<script src= "lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/common/template.js"></script>
+
+<!--引用自己的js-->
+
+<script src="js/singleProduct/singleProduct.js"></script>
+
+</html>

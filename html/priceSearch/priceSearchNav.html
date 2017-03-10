@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8 ">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/common/base.css">
+    <link rel="stylesheet" href="../../css/priceSearch/navGroup.css">
+</head>
+<body>
+<!--<?php include('../common/header.html') ?>-->
+<header id="header">
+    <a id="logo" href="#">
+        <img src="../../images/header_logo.png">
+    </a>
+    <a id="app" href="#">
+        <img src="../../images/header_app.png">
+    </a>
+</header>
+<!--搜索栏-->
+<section class="search">
+    <form>
+        <input id="first" type="search" placeholder="请输入你想比价的商品" >
+        <input id="two" type="submit" value="搜索">
+    </form>
+</section>
+
+<!--菜单栏-->
+<section class="category">
+    <div class="nav-group">
+        <!--<div class="nav-default">-->
+            <!--<div class="nav-heading">-->
+                <!--<h4>-->
+                    <!--<a href="#">大家电</a>-->
+                <!--</h4>-->
+
+            <!--</div>-->
+            <!--<div class="nav-collapse">-->
+                <!--<div class="nav-body">-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;<div class="col-xs-4">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="#">电脑</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+        <!--</div>-->
+    </div>
+</section>
+
+</body>
+
+<script type="text/html" id="navHeadingtpl">
+{{each result as value i}}
+ <div class="nav-default" data-id="{{result[i].titleId}}">
+
+        <div class="nav-heading" >
+                <h4 class="headh4">
+                    <a href="#">{{result[i].title}}</a>
+                </h4>
+
+        </div>
+
+     <div class="nav-collapse">
+         <div class="nav-body">
+             <div class="row">
+
+             </div>
+         </div>
+
+     </div>
+ </div>
+{{/each}}
+</script>
+
+
+
+
+<script id="categoryListTpl" type="text/html">
+    {{each result as value i}}
+
+    <div class="col-xs-4"> <a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></div>
+
+    {{/each}}
+</script>
+
+<script src="../../lib/jquery/jquery1.12.4.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/template/template.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/priceSearch/navGroup.js"></script>
+
+</html>

@@ -1,0 +1,120 @@
+.product .product-info{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.product-info .product-bijia .product-name{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.product-info .product-bijia .product-img{
+    text-align: center;
+
+}
+.product-info .product-bijia .product-collect{
+    width: 100%;
+    position: relative;
+}
+.product-info .product-bijia .product-collect img{
+
+   position: absolute;
+    bottom: 0px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.product-tab .row{
+
+    width: 100%;
+    height: 100%;
+
+}
+.product-tab ul{
+    margin-top: 20px;
+    display: block;
+    /*padding-left: 25px;*/
+    width: 100%;
+    height: 100%;
+}
+.product-tab ul li{
+    display: block;
+    /*float: left;*/
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ff841d;
+    background-color:#f5aa3a ;
+}
+.product-tab ul li:first-child{
+    background-color:#ff841d ;
+}
+
+table{
+    width: 100%;
+    height: 40px;
+
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+table .red{
+    float: right;
+    padding-right: 50px;
+    color: red;
+}
+
+table a img{
+    padding-left: 10px;
+}
+table td a{
+    padding-left: -20px;
+}
+.plist .note{
+    width: 100%;
+    height: 25px;
+    border-top: 1px solid #ccc;
+}
+
+/*网友评价*/
+.product-com-title{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #ccc;
+}
+
+/*评价列表*/
+.product-com-list{
+    width: 100%;
+    height: 100%;
+
+}
+.product-com-list ul{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.product-com-list ul li{
+    padding: 15px 15px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+/*查看更多评价*/
+.more{
+    width:95%;
+    height: 40px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-left: 15px;
+}

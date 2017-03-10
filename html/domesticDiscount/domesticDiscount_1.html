@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--第三方的css-->
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/common/base.css"/>
+
+    <link rel="stylesheet/less" href="../../less/domesticDiscount/inlanddiscount.less"/>
+    <link rel="stylesheet/less" href="../../less/domesticDiscount/discount.less"/>
+    <link rel="stylesheet" href="../../css/domesticDiscount/index.css"/>
+    <!--less.js-->
+    <script src="../../js/domesticDiscount/less.js"></script>
+</head>
+
+<body>
+<header id="header">
+    <h4>省钱控</h4>
+</header>
+<main id="recommen-product" class="discount-product">
+</main>
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p>m.manmanbuy.com </p>
+</footer>
+
+
+</body>
+<script id="discountProduct" type="text/html">
+    {{each result as value i}}
+    <div class="container">
+        <div class="cu-content">
+            <h3 class="title">
+                {{value.productName}}</h3>
+            <h4>{{value.productPrice}}</h4>
+            <div class="info">
+                <span class="mall">{{value.productFrom}}</span> <span class="addtime" style="margin-right: 4px;">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <div class="content clearfix">
+                <div class="picwrap">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg"
+                         alt="国内折扣"></div>
+                <div class="conn">
+                    <!--内容开始-->
+                    <p>{{value.productInfo}}</p>
+                    <p>{{#value.productImg}}</p>
+                    <!--内容结束-->
+                </div>
+            </div>
+            <div class="golink">
+                <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a></div>
+        </div>
+        <div style="text-align: center; margin: 20px 10px;">
+            <img src="../../images/mmbweixin2.png" style="width: 100%; height: auto;">
+        </div>
+        <div class="cu-content-pl ui-border-t">
+            {{#value.productComment}}
+        </div>
+    </div>
+    {{/each}}
+</script>
+<!--调用第三方库-->
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<!--模板-->
+<script src="../../lib/template/template.js"></script>
+<!--自己的库-->
+<script src="../../js/domesticDiscount/guoneizhekou.js"></script>
+<script src="../../js/domesticDiscount/guoneizhelkou_1.js"></script>
+
+</html>

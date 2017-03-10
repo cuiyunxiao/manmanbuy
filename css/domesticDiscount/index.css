@@ -1,0 +1,36 @@
+#header {
+    background-color: #ff841d;
+    height: 50px;
+    padding: 10px;
+}
+h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*font-family: 'Î¢ÈíÑÅºÚ', sans-serif;*/
+    /*font-size: 13px;*/
+}
+#footer > p {
+    text-align: center;
+}
+.col-xs-4 {
+    text-align: center;
+}
+#footer > p :nth-child(odd){
+    color: red;
+}
+.row{
+    line-height: 34px;
+    border: 1px solid #777777;
+    margin-bottom: 10px;
+}
+#footer >.row > div{
+    border-right: 1px solid #777777;
+    /*border-left: 1px solid #777777;*/
+}
+/*#footer > .row > div {*/
+    /*text-align: center;*/
+    /*border: 1px solid #CCC;*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+/*}*/

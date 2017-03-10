@@ -1,0 +1,50 @@
+#brand-title{
+  background-color: #fff;
+  >.product-title {
+    position: relative;
+    >.breadcrumb {
+      margin-bottom: 0px;
+      >li {
+        &::before {
+          content: ""
+        }
+        &::after {
+          content: " >"
+        }
+      }
+    }
+    >.btn {
+      position: absolute;
+      right: 10px;
+      top: 3px;
+      height: 30px;
+    }
+  }
+  >.bigTitle{
+    background-color: fff;
+    padding:5px;
+    padding-bottom: 0px;
+    >h4{
+      background-color: #eee;
+      padding:10px;
+      margin: 5px 0;
+      color:#874604;
+    }
+  }
+  >.brand-List{
+    background-color: #fff;
+    padding-bottom: 1px;
+    >.list-title{
+      background-color: #eee;
+      a{
+        display: block;
+      }
+      h5{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 17px;
+      }
+    }
+  }
+}

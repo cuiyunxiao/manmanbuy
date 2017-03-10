@@ -1,0 +1,79 @@
+#product {
+  background-color: #fff;
+}
+#product > .product-title {
+  position: relative;
+}
+#product > .product-title > .breadcrumb {
+  margin-bottom: 0px;
+}
+#product > .product-title > .breadcrumb > li::before {
+  content: "";
+}
+#product > .product-title > .breadcrumb > li::after {
+  content: " >";
+}
+#product > .product-title > .btn {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  height: 30px;
+}
+#product > .product-list > .media {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  padding-bottom: 0;
+}
+#product > .product-list > .media > .media-left > img {
+  height: 100px;
+  width: 100px;
+}
+#product > .product-list > .media > .media-body > a > .price {
+  color: #e92322;
+}
+#product > .product-list > .media > .media-body > a > .from {
+  float: left;
+  color: #666;
+  font-size: 12px;
+}
+#product > .product-list > .media > .media-body > a > em {
+  font-size: 12px;
+  color: #666;
+}
+#product > .product-page {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+#product > .product-page > .pre {
+  position: absolute;
+  left: 5px;
+  z-index: 3;
+}
+#product > .product-page > .nex {
+  position: absolute;
+  right: 5px;
+  z-index: 3;
+}
+#product > .product-page > .dropdown {
+  text-align: center;
+}
+#product > .product-page > .dropdown > button {
+  display: inline-block;
+  width: 100px;
+}
+#product > .product-page > .dropdown > .dropdown-menu {
+  max-width: 100px;
+  min-width: 100px;
+  padding: 0;
+  margin: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+#product > .product-page > .dropdown > .dropdown-menu > li {
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+}

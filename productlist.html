@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <!--自己的-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/priceSearch/navGroup.css">
+    <link rel="stylesheet" href="css/priceSearch/priceSearchProduct.css">
+    <link rel="stylesheet/less" href="css/moneyctrl.less">
+    <link rel="stylesheet/less" href="css/waitting.less">
+    <!--less.js-->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--<?php include('../common/header.html') ?>-->
+<header id="header">
+    <a id="logo" href="index.html">
+        <img src="images/header_logo.png">
+    </a>
+    <a id="app" href="#">
+        <img src="images/header_app.png">
+    </a>
+</header>
+<!--搜索栏-->
+<section class="search">
+    <form>
+        <input id="first" type="search" placeholder="请输入你想比价的商品" >
+        <input id="two" type="submit" value="搜索">
+    </form>
+</section>
+
+<!--商品列表-->
+<section class="product">
+    <!--商品页头标题-->
+    <div class="product-title">
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">首页</a>
+            </li>
+            <li>
+                <a href="category.html">分类大全</a>
+            </li>
+            <li>
+                <a href="#" class="title">电视</a>
+            </li>
+        </ol>
+        <a href="#" class="btn btn-default">筛选</a>
+    </div>
+    <!--商品列表-->
+    <div class="product-list">
+
+    </div>
+</section>
+    <!--商品分页-->
+    <!--首页菜单-->
+    <section id="moneyCtrl">
+        <div class="recommen-list">
+
+        </div>
+        <div class="product-page clearfix">
+            <input type="button" value="上一页" class="btn btn-default pull-left pre">
+            <input type="button" value="下一页" class="btn btn-default pull-right nex">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <!--第1页-->
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--尾部-->
+    <!--尾部区域-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="">登录</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="">注册</a>
+            </div>
+            <div class="col-xs-4">
+                <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </div>
+        </div>
+        <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+
+
+
+</body>
+
+<script id="productTitletpl" type="text/html">
+    {{each result as value i}}
+
+    <li>
+        <a href="#">{{result.category}}</a>
+    </li>
+
+    {{/each}}
+</script>
+
+<script id="productListtpl" type="text/html">
+    {{each result as value i}}
+
+    <!--商品列表-->
+
+    <div class="media">
+
+            <a class="media-left" href="#">
+                {{#result[i].productImg}}
+            </a>
+            <div class="media-body">
+                <a href="bijia.html?productid={{value.productId}}">
+                    <h5>{{result[i].productName}}</h5>
+                    <p class="price">{{result[i].productPrice}}</p>
+                    <em>{{result[i].productQuote}}</em>
+                    <em>{{result[i].productCom}}</em>
+                </a>
+            </div>
+
+
+    </div>
+
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/index.js"></script>
+<script src="js/priceSearch/category.js"></script>
+<script src="js/saveMoney/moneyctrl.js"></script>
+<script src="js/saveMoney/MoneyCtrlprodu.js"></script>
+<script src="js/priceSearch/productlist.js"></script>
+
+</html>

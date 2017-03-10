@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>品牌排行</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--第三方的css-->
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../less/common/base.css">
+    <link rel="stylesheet" href="../../less/index.css">
+    <!--自己的less样式-->
+    <link rel="stylesheet/less" href="../../less/index.less">
+    <link rel="stylesheet/less" href="../../less/brands/brandsDetail.less">
+    <link rel="stylesheet/less" href="../../css/waitting.less">
+    <!--less.js-->
+    <script src="../../lib/less/less.js"></script>
+    <!--顶部和底部的样式-->
+    <style>
+        #header{
+            position: relative;
+        }
+        #header  .logo,#header .app{
+            position: absolute;
+        }
+        #header  .logo{
+            top:10px;
+            left:20px
+        }
+        #header .app{
+            top:5px;
+            right:0px
+        }
+        #search .searchBar{
+            width:80%;
+            height:30px;
+            margin:8px 10px;
+            border-radius: 15px;
+            padding-left: 10px;
+        }
+        .category-title li{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header id="header">
+    <a class="logo" href="#">
+        <img src="../../images/header_logo.png" alt="">
+    </a>
+    <a class="app" href="">
+        <img src="../../images/header_app.png" alt="" style="width: 60%;height:60%">
+    </a>
+</header>
+<!--搜索框-->
+<section id="search">
+    <form action="">
+        <input class="searchBar" type="search" placeholder="请输入你想比价的商品">
+        <input type="submit" value="搜索">
+    </form>
+</section>
+
+<section id="brand" class="model">
+    <!--路径导航-->
+    <div class="product-title">
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">全部分类</a></li>
+            <li>品牌大全</li>
+        </ol>
+        <a class="btn btn-default" href="">筛选</a>
+    </div>
+
+    <!--品牌列表-->
+    <div class="category-list">
+        <div class="hd">
+            <h3>平板电视哪个牌子好</h3>
+        </div>
+        <div class="row clearfix brand-list">
+            <ul class="category-title">
+
+            </ul>
+        </div>
+        <div class="hd">
+            <h3>平板电视产品销量排行</h3>
+        </div>
+        <div class="product-list">
+            <!--       <div class="media">
+                <a class="media-left" href="#">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视"
+                        width="100" height="100">
+                </a>
+                <div class="media-body">
+                    <h5><a href="bijia.html?productid=1">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</a></h5>
+                    <p class="price">￥3266.00</p>
+                    <em>报价(6)</em><em>评论(3522)</em>
+                </div>
+            </div>-->
+        </div>
+        <div class="hd">
+            <h3>平板电视最新评论
+                <</h3>
+        </div>
+        <div class="bd pllist product-com">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p><a href="">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p>m.manmanbuy.com </p>
+</footer>
+</body>
+<script type="text/html" id="brandListTpl">
+    {{each result as value i}}
+    <li><a href="productlist.html?categoryid={{value.categoryId}}&pageid=1" title="{{value.brandName}}"><em class="top{{i+1}}">{{i+1}}</em><div class="inner"><div class="tit">{{value.brandName}}</div><p>{{value.brandInfo}}</p></div></a></li>
+    {{/each}}
+</script>
+<script id="productListTpl" type="text/html">
+    {{each result as value i}}
+    <div class="media">
+        <a class="media-left" href="bijia.html?productId={{value.productId}}">
+            {{#value.productImg}}
+        </a>
+        <div class="media-body">
+            <a href="bijia.html?productId={{value.productId}}">
+                <h5>{{value.productName}}</h5>
+                <p class="price">{{value.productPrice}}</p>
+                <em>{{value.productQuote}}</em><em>{{value.productCom}}</em>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="productComTpl">
+    {{each result as value i}}
+    <li>
+        <a href="bijia.aspx?id=211698">
+            <div class="protit">
+                <div class="pic">
+                    {{#result.product.productImg}}
+                </div>
+                <div class="tit">{{result.product.productName}}</div>
+            </div>
+
+            <div class="plbox">
+                <div class="name">{{value.comName}}<span class="star"><em class="star5"></em></span><i>{{value.comTime}}</i></div>
+                <div class="con">{{value.comContent}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../../lib/template/template.js"></script>
+<!--自己的index.js-->
+<script src="../../js/common/template.js"></script>
+<script src="../../js/brands/brandsDetail.js"></script>
+
+</html>
